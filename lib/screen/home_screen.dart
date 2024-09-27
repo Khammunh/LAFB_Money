@@ -29,19 +29,31 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               margin: EdgeInsets.only(right: 10.0, left: 10.0),
               child: Card(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
                   children: [
-                    Text('ເຂົ້າສູ່ລະບົບ'),
-                    Image.asset(
-                      'assets/icons/lafb.jpeg',
-                      height: 30.0,
-                      width: 30.0,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('ເຂົ້າສູ່ລະບົບ'),
+                        Image.asset(
+                          'assets/icons/lafb.jpeg',
+                          height: 30.0,
+                          width: 30.0,
+                        ),
+                      ],
                     ),
+                    Column(
+                      children: [
+                        TextFormField(),
+                      ],
+                    )
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
